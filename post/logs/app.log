@@ -1,0 +1,24 @@
+2026-02-17T00:19:12.440+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m4s929ms).
+2026-02-17T00:52:35.279+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m22s839ms).
+2026-02-17T01:40:40.764+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m5s485ms).
+2026-02-17T02:13:20.033+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m39s269ms).
+2026-02-17T02:46:48.462+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m28s429ms).
+2026-02-17T04:11:02.998+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m14s536ms).
+2026-02-17T04:14:12.983+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m9s985ms).
+2026-02-17T05:02:45.078+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m32s95ms).
+2026-02-17T05:44:16.596+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m31s518ms).
+2026-02-17T07:20:14.970+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h35m58s374ms).
+2026-02-17T08:06:01.071+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45m46s101ms).
+2026-02-17T08:30:45.601+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m14s528ms).
+2026-02-17T08:32:05.867+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s266ms).
+2026-02-17T08:48:50.068+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m44s201ms).
+2026-02-17T09:56:57.262+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m7s194ms).
+2026-02-17T10:07:16.015+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m18s753ms).
+2026-02-17T10:40:04.725+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m48s710ms).
+2026-02-17T10:53:17.649+05:30  WARN 98486 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m12s924ms).
+2026-02-17T11:54:53.798+05:30  INFO 98486 --- [post] [RMI TCP Connection(1013)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-02-17T11:54:53.804+05:30  INFO 98486 --- [post] [RMI TCP Connection(1013)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-17T11:54:53.806+05:30  INFO 98486 --- [post] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-17T11:54:53.811+05:30  INFO 98486 --- [post] [RMI TCP Connection(1013)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-17T11:54:53.813+05:30  INFO 98486 --- [post] [RMI TCP Connection(1013)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-17T11:54:53.813+05:30  INFO 98486 --- [post] [RMI TCP Connection(1013)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
