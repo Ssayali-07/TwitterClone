@@ -1,6 +1,7 @@
 package com.microblog.db_service.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +16,7 @@ import com.microblog.db_service.DataModel.DataFollowers;
 import com.microblog.db_service.DataModel.DataLikes;
 import com.microblog.db_service.DataModel.DataPosts;
 import com.microblog.db_service.DataModel.DataUser;
-import com.microblog.db_service.Model.RequestEntity.MyPostRequest;
+import com.microblog.db_service.Model.RequestEntity.FetchFollowingPostRequest;
 import com.microblog.db_service.Model.RequestEntity.UserDeleteRequest;
 import com.microblog.db_service.Model.RequestEntity.UserFetchRequest;
 import com.microblog.db_service.Model.RequestEntity.UserFollowerRequest;
@@ -23,6 +24,7 @@ import com.microblog.db_service.Model.RequestEntity.UserLikeRequest;
 import com.microblog.db_service.Model.RequestEntity.UserPostRequest;
 import com.microblog.db_service.Model.RequestEntity.UserRequest;
 import com.microblog.db_service.Model.RequestEntity.UserUpdatedRequest;
+import com.microblog.db_service.Model.ResponseEntity.DataPostResponse;
 import com.microblog.db_service.Model.ResponseEntity.UserFetchResponse;
 import com.microblog.db_service.Repository.IDataFollowersRepo;
 import com.microblog.db_service.Repository.IDataLikesRepo;
@@ -204,7 +206,11 @@ public class UserDBSvc {
 			try {
 
 				DataUser dataUserFetchObj = userRepoObj.findByEmail(userFetchRequestObj.getEmail());
-
+				//List<DataPosts> posts = dataUserFetchObj.getPosts();	
+				List<DataPostResponse> posts = new ArrayList<>();
+				for(DataPosts pos : dataUserFetchObj.getPosts()) {
+					posts.add(new DataPostResponse(pos.getContent(),pos.getCreatedDate()));
+				}
 				if (dataUserFetchObj != null) {
 
 					UserFetchResponse userFetchResponseObj = new UserFetchResponse();
@@ -212,7 +218,7 @@ public class UserDBSvc {
 					userFetchResponseObj.setUsername(dataUserFetchObj.getUsername());
 					userFetchResponseObj.setEmail(dataUserFetchObj.getEmail());
 					userFetchResponseObj.setPassword(dataUserFetchObj.getPassword());
-
+					userFetchResponseObj.setPosts(posts);
 					return new ResponseEntity<>(userFetchResponseObj, HttpStatus.OK);
 
 				} else {
@@ -379,12 +385,55 @@ public class UserDBSvc {
 		
 	}
 	
-	public ResponseEntity<List<DataPosts>> myPostS(MyPostRequest myPostReqObj){
-		List<DataFollowers> FollowingObj = followerRepoObj.findByUserId(myPostReqObj.getUserId());
-//		List<Long> followersObj = followerRepoObj.findBy
+	public ResponseEntity FetchFollowingPostS(FetchFollowingPostRequest fetchFollowingReq) {
 		
+		if(fetchFollowingReq!=null) {
+			//using query
+//			DataUser dataUserFetchObj = userRepoObj.findByEmail(fetchFollowingReq.getEmail());
+//			List<DataPostResponse> posts = followerRepoObj.fetchFollowerFeed(dataUserFetchObj.getUserId());
+//			return new ResponseEntity(posts, HttpStatus.OK)	;
+			
+			//return new ResponseEntity(followerRepoObj.fetchFollowerFeed(userRepoObj.findByEmail(fetchFollowingReq.getEmail()).getUserId()), HttpStatus.OK);	
+			
+			
+			//using jpa
+			DataUser dataUserFetchObj = userRepoObj.findByEmail(fetchFollowingReq.getEmail());
+			List<DataFollowers> followingId = followerRepoObj.findByFollower(dataUserFetchObj);
+			
+
+			
+			List<DataPostResponse> posts = new ArrayList<>();
+			
+			for(DataFollowers followings : followingId ) {
+				Optional<DataUser> followUser = userRepoObj.findById(followings.getFollowing().getUserId());
+				if(followUser.isPresent()) {
+					for(DataPosts pos : followUser.get().getPosts()) {
+						System.out.println(pos.getLikes().size());
+						for(DataLikes like : pos.getLikes()) {
+							System.out.println(like);
+						}
+						posts.add(new DataPostResponse(pos.getContent(),pos.getCreatedDate(),pos.getLikes().size()));
+					}
+				}
+				
+				
+			}
+			
+			
+			return new ResponseEntity(posts, HttpStatus.OK)	;
+			
+			
+			
+		}else {
+			Map<String, String> responseMap = new HashMap<>();
+
+			responseMap.put("msg", "Something went Wrong");
+
+			return new ResponseEntity<>(responseMap, HttpStatus.OK);
+		}
 		
-		return null;
 	}
+	
+
 
 }

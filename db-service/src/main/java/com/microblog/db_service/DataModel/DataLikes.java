@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,12 +23,13 @@ public class DataLikes {
 	@Column(name="TWEET_LIKES")
 	private Long likeId;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="USER_ID")
 	private DataUser user;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="TWEET_ID")
 	private DataPosts post;
+	
 
 }

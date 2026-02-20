@@ -6,6 +6,7 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -46,7 +47,7 @@ public class DataUser {
 	@OneToMany(mappedBy = "following", cascade = CascadeType.ALL)
 	public List<DataFollowers> following;
 	
-	@OneToMany(mappedBy = "likeId", cascade = CascadeType.ALL)
-	public List<DataLikes> likes;
+//	@OneToMany(mappedBy = "likeId", cascade = CascadeType.ALL)
+//	public List<DataLikes> likes;
 
 }
