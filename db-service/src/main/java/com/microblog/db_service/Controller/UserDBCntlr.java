@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.microblog.db_service.Model.RequestEntity.UserFollowerRequest;
 import com.microblog.db_service.DataModel.DataPosts;
-import com.microblog.db_service.Model.RequestEntity.MyPostRequest;
+import com.microblog.db_service.Model.RequestEntity.FetchFollowingPostRequest;
 import com.microblog.db_service.Model.RequestEntity.UserDeleteRequest;
 import com.microblog.db_service.Model.RequestEntity.UserFetchRequest;
 import com.microblog.db_service.Model.RequestEntity.UserLikeRequest;
@@ -66,10 +66,11 @@ public class UserDBCntlr {
 		return userdbsvcobj.followDataS(userFollowReqObj);
 	}
 	
-	@PostMapping("/mypost")
-	public ResponseEntity<List<DataPosts>> myPostC(@RequestBody MyPostRequest myPostReqObj) {
-		//List<DataPosts> posts = userdbsvcobj.myPostS(myPostReqObj.getUserId());
-		return userdbsvcobj.myPostS(myPostReqObj);
+	@PostMapping("/followingPost")
+	public ResponseEntity FetchFollowingPostC(@RequestBody FetchFollowingPostRequest fetchFollowingReq) {
+		return userdbsvcobj.FetchFollowingPostS(fetchFollowingReq);
 	}
+	
+	
 	
 }
