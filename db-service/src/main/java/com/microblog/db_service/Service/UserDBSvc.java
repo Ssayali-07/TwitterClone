@@ -408,10 +408,10 @@ public class UserDBSvc {
 				Optional<DataUser> followUser = userRepoObj.findById(followings.getFollowing().getUserId());
 				if(followUser.isPresent()) {
 					for(DataPosts pos : followUser.get().getPosts()) {
-						System.out.println(pos.getLikes().size());
-						for(DataLikes like : pos.getLikes()) {
-							System.out.println(like);
-						}
+//						System.out.println(pos.getLikes().size());
+//						for(DataLikes like : pos.getLikes()) {
+//							System.out.println(like);
+//						}
 						posts.add(new DataPostResponse(pos.getContent(),pos.getCreatedDate(),pos.getLikes().size()));
 					}
 				}
