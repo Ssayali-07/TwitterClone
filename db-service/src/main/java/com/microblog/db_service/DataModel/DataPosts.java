@@ -50,8 +50,8 @@ public class DataPosts {
 //	@JoinColumn(name="LIKE_ID")
 //	private DataLikes likeId;
 	
-	@OneToMany(mappedBy = "likeId", cascade = CascadeType.ALL)
-	public List<DataLikes> likes;
+	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+	public List<DataLikes> likes ;
 	
 	public DataPosts() {
 		// TODO Auto-generated constructor stub
