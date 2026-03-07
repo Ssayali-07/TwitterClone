@@ -99,6 +99,11 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+			<version>5.0.1</version>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -113,16 +118,7 @@
 	</dependencyManagement>
 
 	<build>
-		<plugins>
-			
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					
-				</configuration>
-			</plugin>
-		</plugins>
+		
 	</build>
 
 </project>
