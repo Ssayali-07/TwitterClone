@@ -1,33 +1,98 @@
-2026-03-07T00:33:27.226+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m29s716ms).
-2026-03-07T00:50:40.203+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m12s977ms).
-2026-03-07T01:28:44.261+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m4s58ms).
-2026-03-07T01:46:02.259+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m17s998ms).
-2026-03-07T02:19:50.419+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m48s160ms).
-2026-03-07T02:55:32.021+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m41s602ms).
-2026-03-07T03:08:00.712+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m28s691ms).
-2026-03-07T04:43:46.845+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h35m46s133ms).
-2026-03-07T05:24:40.915+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m54s70ms).
-2026-03-07T05:56:01.559+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m20s644ms).
-2026-03-07T06:31:14.237+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m12s678ms).
-2026-03-07T08:10:55.344+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h39m41s107ms).
-2026-03-07T08:27:18.356+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m23s12ms).
-2026-03-07T08:58:16.077+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m57s721ms).
-2026-03-07T09:32:25.815+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m39s716ms).
-2026-03-07T09:41:52.821+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m56s994ms).
-2026-03-07T10:15:24.014+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m31s193ms).
-2026-03-07T10:47:38.055+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m14s41ms).
-2026-03-07T10:59:20.983+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s928ms).
-2026-03-07T11:31:23.474+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m2s491ms).
-2026-03-07T12:00:31.522+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m8s48ms).
-2026-03-07T12:36:06.183+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m34s661ms).
-2026-03-07T13:01:09.838+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m3s655ms).
-2026-03-07T14:02:10.281+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30s428ms).
-2026-03-07T14:51:01.678+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m21s387ms).
-2026-03-07T15:03:21.723+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m20s45ms).
-2026-03-07T15:16:12.373+05:30  WARN 14586 --- [post] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m50s650ms).
-2026-03-07T15:19:55.477+05:30  INFO 14586 --- [post] [RMI TCP Connection(3672)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2026-03-07T15:19:55.518+05:30  INFO 14586 --- [post] [RMI TCP Connection(3672)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-03-07T15:19:56.532+05:30  INFO 14586 --- [post] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-03-07T15:19:56.553+05:30  INFO 14586 --- [post] [RMI TCP Connection(3672)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-07T15:19:56.565+05:30  INFO 14586 --- [post] [RMI TCP Connection(3672)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-07T15:19:56.567+05:30  INFO 14586 --- [post] [RMI TCP Connection(3672)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-08T16:16:56.329+05:30  INFO 45970 --- [post] [main] com.microblog.post.PostApplication       : Starting PostApplication using Java 21.0.6 with PID 45970 (/Users/sayalis/git/TwitterClone/post/target/classes started by sayalis in /Users/sayalis/git/TwitterClone/post)
+2026-03-08T16:16:56.331+05:30 DEBUG 45970 --- [post] [main] com.microblog.post.PostApplication       : Running with Spring Boot v4.0.2, Spring v7.0.3
+2026-03-08T16:16:56.332+05:30  INFO 45970 --- [post] [main] com.microblog.post.PostApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-08T16:16:56.349+05:30  INFO 45970 --- [post] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9092
+2026-03-08T16:16:56.349+05:30  INFO 45970 --- [post] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=post, profiles=[default], label=null, version=1b125439d59a27eb3d1dafa49156d29c6df6b743, state=
+2026-03-08T16:16:56.628+05:30  INFO 45970 --- [post] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-08T16:16:56.643+05:30  INFO 45970 --- [post] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-03-08T16:16:56.703+05:30  INFO 45970 --- [post] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=830b8399-bf5a-355b-9e07-07e3b837e22e
+2026-03-08T16:16:56.881+05:30  INFO 45970 --- [post] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9091 (http)
+2026-03-08T16:16:56.889+05:30  INFO 45970 --- [post] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-08T16:16:56.890+05:30  INFO 45970 --- [post] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-08T16:16:56.916+05:30  INFO 45970 --- [post] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 565 ms
+2026-03-08T16:16:56.985+05:30  INFO 45970 --- [post] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-08T16:16:57.110+05:30  INFO 45970 --- [post] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cfb64754-62b9-4b9a-a275-7742fa418255 user=SA
+2026-03-08T16:16:57.111+05:30  INFO 45970 --- [post] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-08T16:16:57.135+05:30  INFO 45970 --- [post] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-08T16:16:57.171+05:30  INFO 45970 --- [post] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-03-08T16:16:57.403+05:30  INFO 45970 --- [post] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-08T16:16:57.453+05:30  INFO 45970 --- [post] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:cfb64754-62b9-4b9a-a275-7742fa418255]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CFB64754-62B9-4B9A-A275-7742FA418255/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-08T16:16:57.672+05:30  INFO 45970 --- [post] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-08T16:16:57.678+05:30  INFO 45970 --- [post] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-08T16:16:57.831+05:30  WARN 45970 --- [post] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-08T16:16:58.083+05:30  INFO 45970 --- [post] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9091 (http) with context path '/'
+2026-03-08T16:16:58.094+05:30  INFO 45970 --- [post] [main] com.microblog.post.PostApplication       : Started PostApplication in 3.091 seconds (process running for 3.552)
+2026-03-08T16:19:47.771+05:30  INFO 45970 --- [post] [http-nio-9091-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-08T16:19:47.772+05:30  INFO 45970 --- [post] [http-nio-9091-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-08T16:19:47.775+05:30  INFO 45970 --- [post] [http-nio-9091-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-08T16:19:47.846+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> POST http://localhost:8080/User-DB-Operations/post HTTP/1.1
+2026-03-08T16:19:47.846+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Length: 54
+2026-03-08T16:19:47.846+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Type: application/json
+2026-03-08T16:19:47.846+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:19:47.846+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"content":"third coment","email":"samruddha@tcs.com"}
+2026-03-08T16:19:47.846+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> END HTTP (54-byte body)
+2026-03-08T16:19:47.885+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- HTTP/1.1 200  (38ms)
+2026-03-08T16:19:47.886+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] connection: keep-alive
+2026-03-08T16:19:47.886+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] content-type: application/json
+2026-03-08T16:19:47.886+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] date: Sun, 08 Mar 2026 10:49:47 GMT
+2026-03-08T16:19:47.886+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] keep-alive: timeout=60
+2026-03-08T16:19:47.886+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] transfer-encoding: chunked
+2026-03-08T16:19:47.886+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:19:47.887+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"msg":"User not found"}
+2026-03-08T16:19:47.887+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-2] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- END HTTP (24-byte body)
+2026-03-08T16:20:04.857+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> POST http://localhost:8080/User-DB-Operations/post HTTP/1.1
+2026-03-08T16:20:04.857+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Length: 51
+2026-03-08T16:20:04.858+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Type: application/json
+2026-03-08T16:20:04.858+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:20:04.858+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"content":"first coment","email":"sayali@tcs.com"}
+2026-03-08T16:20:04.858+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> END HTTP (51-byte body)
+2026-03-08T16:20:04.872+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- HTTP/1.1 200  (13ms)
+2026-03-08T16:20:04.873+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] connection: keep-alive
+2026-03-08T16:20:04.873+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] content-type: application/json
+2026-03-08T16:20:04.873+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] date: Sun, 08 Mar 2026 10:50:04 GMT
+2026-03-08T16:20:04.873+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] keep-alive: timeout=60
+2026-03-08T16:20:04.873+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] transfer-encoding: chunked
+2026-03-08T16:20:04.873+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:20:04.874+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"msg":"Post Saved"}
+2026-03-08T16:20:04.874+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-3] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- END HTTP (20-byte body)
+2026-03-08T16:20:40.270+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> POST http://localhost:8080/User-DB-Operations/fetch HTTP/1.1
+2026-03-08T16:20:40.271+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Length: 26
+2026-03-08T16:20:40.271+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Type: application/json
+2026-03-08T16:20:40.271+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:20:40.272+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"email":"sayali@tcs.com"}
+2026-03-08T16:20:40.272+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> END HTTP (26-byte body)
+2026-03-08T16:20:40.286+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- HTTP/1.1 200  (14ms)
+2026-03-08T16:20:40.287+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] connection: keep-alive
+2026-03-08T16:20:40.287+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] content-type: application/json
+2026-03-08T16:20:40.287+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] date: Sun, 08 Mar 2026 10:50:40 GMT
+2026-03-08T16:20:40.287+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] keep-alive: timeout=60
+2026-03-08T16:20:40.287+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] transfer-encoding: chunked
+2026-03-08T16:20:40.288+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:20:40.288+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"email":"sayali@tcs.com","name":"Sayali Sonawane","password":"9bb0987853d7775e08a17c07915b63344bfe930a882b7b387b741c95ff842d99","posts":[{"content":"first coment","createdDate":"2026-03-08T16:20:04.86545","numberOfLikes":0}],"username":"Sayali077"}
+2026-03-08T16:20:40.288+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-4] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- END HTTP (249-byte body)
+2026-03-08T16:30:15.863+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> POST http://localhost:8080/User-DB-Operations/fetch HTTP/1.1
+2026-03-08T16:30:15.865+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Length: 26
+2026-03-08T16:30:15.865+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] Content-Type: application/json
+2026-03-08T16:30:15.865+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:30:15.865+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"email":"sayali@tcs.com"}
+2026-03-08T16:30:15.865+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] ---> END HTTP (26-byte body)
+2026-03-08T16:30:15.891+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- HTTP/1.1 200  (25ms)
+2026-03-08T16:30:15.891+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] connection: keep-alive
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] content-type: application/json
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] date: Sun, 08 Mar 2026 11:00:15 GMT
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] keep-alive: timeout=60
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] transfer-encoding: chunked
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] 
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] {"email":"sayali@tcs.com","name":"Sayali Sonawane","password":"9bb0987853d7775e08a17c07915b63344bfe930a882b7b387b741c95ff842d99","posts":[{"content":"first coment","createdDate":"2026-03-08T16:20:04.86545","numberOfLikes":0}],"username":"Sayali077"}
+2026-03-08T16:30:15.892+05:30 DEBUG 45970 --- [post] [http-nio-9091-exec-6] com.microblog.post.feign.UserDbClient    : [UserDbClient#postResObj] <--- END HTTP (249-byte body)

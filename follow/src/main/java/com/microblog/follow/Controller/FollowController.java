@@ -1,4 +1,4 @@
-package com.microblog.post.Controller;
+package com.microblog.follow.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,23 +7,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.microblog.post.Model.RequestEntity.PostRequest;
-import com.microblog.post.Service.PostService;
-
+import com.microblog.follow.Model.RequestEntity.FollowRequest;
+import com.microblog.follow.Service.FollowService;
 
 @RestController
-@RequestMapping("/post")
-public class PostController {
+@RequestMapping("/follow")
+public class FollowController {
 	
 	@Autowired
-	PostService postSvcObj;
-	
-
+	FollowService followSvcObj;
 	
 	@PostMapping
-	public ResponseEntity postC(@RequestBody PostRequest postRequestObj) {
-		return postSvcObj.postS(postRequestObj);
+	public ResponseEntity followC(@RequestBody FollowRequest followReqObj) {
+		return followSvcObj.followS(followReqObj);
 	}
 
 }
-
