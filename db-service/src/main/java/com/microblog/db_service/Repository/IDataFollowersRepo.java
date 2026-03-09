@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.microblog.db_service.DataModel.DataFollowers;
 import com.microblog.db_service.DataModel.DataUser;
-import com.microblog.db_service.Model.ResponseEntity.DataPostResponse;
+import com.microblog.db_service.Model.ResponseEntity.FetchFollowingPostResponse;
 
 @Repository
 public interface IDataFollowersRepo extends JpaRepository<DataFollowers, Long>{
@@ -21,7 +21,7 @@ public interface IDataFollowersRepo extends JpaRepository<DataFollowers, Long>{
 	
 	@Query(nativeQuery = true , 
 			value= "select p from twitter_posts p join twitter_followers f ON  p.user_id = f.following_id where f.follower_id=:followerID")
-	List<DataPostResponse>  fetchFollowerFeed(@Param("followerID") Long followerID);
+	List<FetchFollowingPostResponse>  fetchFollowerFeed(@Param("followerID") Long followerID);
 	
 	
 	//select p.user_id,p.tweet_id,p.content,p.created_date from twitter_posts p join twitter_followers f  ON  p.user_id = f.following_id where f.follower_id=?
