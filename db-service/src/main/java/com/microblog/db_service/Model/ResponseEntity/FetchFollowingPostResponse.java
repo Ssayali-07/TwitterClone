@@ -6,7 +6,7 @@ import jakarta.persistence.Column;
 import lombok.Data;
 
 @Data
-public class DataPostResponse {
+public class FetchFollowingPostResponse {
 
 	private String content;
 	
@@ -16,14 +16,14 @@ public class DataPostResponse {
 	private int numberOfLikes;
 
 
-	public DataPostResponse(String content, LocalDateTime createdDate,int numberOfLikes) {
+	public FetchFollowingPostResponse(String content, LocalDateTime createdDate,int numberOfLikes) {
 		super();
 		this.content = content;
 		this.createdDate = createdDate;
 		this.numberOfLikes = numberOfLikes;
 	}
 	
-	public DataPostResponse(String content, LocalDateTime createdDate) {
+	public FetchFollowingPostResponse(String content, LocalDateTime createdDate) {
 		super();
 		this.content = content;
 		this.createdDate = createdDate;
