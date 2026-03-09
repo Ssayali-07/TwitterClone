@@ -1,11 +1,15 @@
 package com.microblog.post.feign;
 
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.microblog.post.Model.RequestEntity.FetchMyPostRequest;
+import com.microblog.post.Model.RequestEntity.FollowingPostRequest;
 import com.microblog.post.Model.RequestEntity.PostRequest;
+import com.microblog.post.Model.ResponseEntity.FetchFollowingResponse;
 import com.microblog.post.Model.ResponseEntity.FetchMyPostResponse;
 import com.microblog.post.Model.ResponseEntity.PostResponse;
 
@@ -23,6 +27,9 @@ public interface UserDbClient {
 	@PostMapping("/User-DB-Operations/fetch")
 	public FetchMyPostResponse postResObj(@RequestBody FetchMyPostRequest fetchPostReqObj);
 	
+	
+	@PostMapping("/User-DB-Operations/followingPost")
+	public List<FetchFollowingResponse> followingPostResObj(@RequestBody FollowingPostRequest followingPostReqObj);
 
 }
 

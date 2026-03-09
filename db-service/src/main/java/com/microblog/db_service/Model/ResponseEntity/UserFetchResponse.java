@@ -14,7 +14,7 @@ public class UserFetchResponse {
 	public String email;
 	public String password;
 	//public List<DataPosts> post;
-	public List<DataPostResponse> posts;
+	public List<FetchFollowingPostResponse> posts;
 //	public UserFetchResponse(String name, String username, String email, String password) {
 //		super();
 //		this.name = name;

@@ -24,7 +24,7 @@ import com.microblog.db_service.Model.RequestEntity.UserLikeRequest;
 import com.microblog.db_service.Model.RequestEntity.UserPostRequest;
 import com.microblog.db_service.Model.RequestEntity.UserRequest;
 import com.microblog.db_service.Model.RequestEntity.UserUpdatedRequest;
-import com.microblog.db_service.Model.ResponseEntity.DataPostResponse;
+import com.microblog.db_service.Model.ResponseEntity.FetchFollowingPostResponse;
 import com.microblog.db_service.Model.ResponseEntity.UserFetchResponse;
 import com.microblog.db_service.Repository.IDataFollowersRepo;
 import com.microblog.db_service.Repository.IDataLikesRepo;
@@ -207,9 +207,9 @@ public class UserDBSvc {
 
 				DataUser dataUserFetchObj = userRepoObj.findByEmail(userFetchRequestObj.getEmail());
 				//List<DataPosts> posts = dataUserFetchObj.getPosts();	
-				List<DataPostResponse> posts = new ArrayList<>();
+				List<FetchFollowingPostResponse> posts = new ArrayList<>();
 				for(DataPosts pos : dataUserFetchObj.getPosts()) {
-					posts.add(new DataPostResponse(pos.getContent(),pos.getCreatedDate()));
+					posts.add(new FetchFollowingPostResponse(pos.getContent(),pos.getCreatedDate()));
 				}
 				if (dataUserFetchObj != null) {
 
@@ -402,7 +402,7 @@ public class UserDBSvc {
 			
 
 			
-			List<DataPostResponse> posts = new ArrayList<>();
+			List<FetchFollowingPostResponse> posts = new ArrayList<>();
 			
 			for(DataFollowers followings : followingId ) {
 				Optional<DataUser> followUser = userRepoObj.findById(followings.getFollowing().getUserId());
@@ -412,7 +412,7 @@ public class UserDBSvc {
 //						for(DataLikes like : pos.getLikes()) {
 //							System.out.println(like);
 //						}
-						posts.add(new DataPostResponse(pos.getContent(),pos.getCreatedDate(),pos.getLikes().size()));
+						posts.add(new FetchFollowingPostResponse(pos.getContent(),pos.getCreatedDate(),pos.getLikes().size()));
 					}
 				}
 				
