@@ -75,5 +75,6 @@ public class UserDBSvcTest {
 		//Mockito.verify(userRepoObj).save(dobj);
 		Mockito.verify(userRepoObj).save(Mockito.any(DataUser.class));
 	}
+	
 
 }
