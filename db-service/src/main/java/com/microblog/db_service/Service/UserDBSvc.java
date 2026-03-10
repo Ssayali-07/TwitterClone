@@ -25,6 +25,7 @@ import com.microblog.db_service.Model.RequestEntity.UserPostRequest;
 import com.microblog.db_service.Model.RequestEntity.UserRequest;
 import com.microblog.db_service.Model.RequestEntity.UserUpdatedRequest;
 import com.microblog.db_service.Model.ResponseEntity.FetchFollowingPostResponse;
+import com.microblog.db_service.Model.ResponseEntity.InsertResponse;
 import com.microblog.db_service.Model.ResponseEntity.UserFetchResponse;
 import com.microblog.db_service.Repository.IDataFollowersRepo;
 import com.microblog.db_service.Repository.IDataLikesRepo;
@@ -59,17 +60,21 @@ public class UserDBSvc {
 				DataUser dataUserObj2 = userRepoObj.findByUsername(userRequestObj.getUsername());
 
 				if (dataUserObj1 != null) {
-					Map<String, String> responseMap = new HashMap<>();
-
-					responseMap.put("msg", "User Already Exist");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+//					Map<String, String> responseMap = new HashMap<>();
+//
+//					responseMap.put("msg", "User Already Exist");
+//
+//					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					
+					InsertResponse res = new InsertResponse("User Already Exist");
+					return new ResponseEntity(res, HttpStatus.OK);
+					
+//					return ResponseEntity.ok("User Already Exist");
 				} else if (dataUserObj2 != null) {
-					Map<String, String> responseMap = new HashMap<>();
-
-					responseMap.put("msg", "UserName Not Available");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					
+					
+					InsertResponse res = new InsertResponse("UserName Not Available");
+					return new ResponseEntity(res, HttpStatus.OK);
 				}
 
 				else {
@@ -81,31 +86,26 @@ public class UserDBSvc {
 					dataUserObj.setPassword(userRequestObj.getPassword());
 
 					userRepoObj.save(dataUserObj);
+					
+					InsertResponse res = new InsertResponse("User Created");
+					return new ResponseEntity(res, HttpStatus.OK);
 
-					Map<String, String> responseMap = new HashMap<>();
-
-					responseMap.put("msg", "User Created");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					
 				}
 
 			} catch (Exception e) {
 				// TODO: handle exception
-				Map<String, String> responseMap = new HashMap<>();
-
-				responseMap.put("msg", "Something went Wrong");
-
-				return new ResponseEntity<>(responseMap, HttpStatus.OK);
+				
+				InsertResponse res = new InsertResponse("Something went Wrong");
+				return new ResponseEntity(res, HttpStatus.OK);
+				
 
 //			throw new Exception("Something went Wrong", e);
 
 			}
 		} else {
-			Map<String, String> responseMap = new HashMap<>();
-
-			responseMap.put("msg", "Something went Wrong");
-
-			return new ResponseEntity<>(responseMap, HttpStatus.OK);
+			InsertResponse res = new InsertResponse("Something went Wrong");
+			return new ResponseEntity(res, HttpStatus.OK);
 		}
 
 	}
