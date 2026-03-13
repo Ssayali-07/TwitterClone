@@ -1,6 +1,8 @@
 package com.microblog.db_service.Service;
 
 
+import static org.mockito.Mockito.times;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,8 +14,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 
 import com.microblog.db_service.DataModel.DataUser;
+import com.microblog.db_service.Model.RequestEntity.UserDeleteRequest;
 import com.microblog.db_service.Model.RequestEntity.UserRequest;
-import com.microblog.db_service.Model.ResponseEntity.InsertResponse;
+import com.microblog.db_service.Model.RequestEntity.UserUpdatedRequest;
+import com.microblog.db_service.Model.ResponseEntity.InsertUpdateDeleteResponse;
 import com.microblog.db_service.Repository.IDataUserRepo;
 
 @SpringBootTest
@@ -36,7 +40,7 @@ public class UserDBSvcTest {
 		DataUser dbobj = new DataUser();
 		Mockito.when(userRepoObj.findByEmail("test@gmail.com")).thenReturn(dbobj);
 		
-		ResponseEntity<InsertResponse> response = userDbSvcObj.insertUserDataS(reqObj);
+		ResponseEntity<InsertUpdateDeleteResponse> response = userDbSvcObj.insertUserDataS(reqObj);
 		
 		Assertions.assertEquals("User Already Exist", response.getBody().getMsg());
 	}
@@ -51,7 +55,7 @@ public class UserDBSvcTest {
 		Mockito.when(userRepoObj.findByEmail("test@gmail.com")).thenReturn(null);
 		Mockito.when(userRepoObj.findByUsername("testName")).thenReturn(dobj);
 		
-		ResponseEntity<InsertResponse> response = userDbSvcObj.insertUserDataS(req);
+		ResponseEntity<InsertUpdateDeleteResponse> response = userDbSvcObj.insertUserDataS(req);
 		
 		Assertions.assertEquals("UserName Not Available", response.getBody().getMsg());
 	}
@@ -68,13 +72,61 @@ public class UserDBSvcTest {
 		Mockito.when(userRepoObj.findByEmail("test@gmail.com")).thenReturn(null);
 		Mockito.when(userRepoObj.findByUsername("testName")).thenReturn(null);
 		
-		ResponseEntity<InsertResponse> response = userDbSvcObj.insertUserDataS(req);
+		ResponseEntity<InsertUpdateDeleteResponse> response = userDbSvcObj.insertUserDataS(req);
 		
 		Assertions.assertEquals("User Created", response.getBody().getMsg());		
 		//check whether dataInserted in db
-		//Mockito.verify(userRepoObj).save(dobj);
-		Mockito.verify(userRepoObj).save(Mockito.any(DataUser.class));
+//		Mockito.verify(userRepoObj).save(dobj);
+		Mockito.verify(userRepoObj,times(1)).save(Mockito.any(DataUser.class));
 	}
 	
+	
+	@Test
+	void UserUpdated() {
+		UserUpdatedRequest req = new UserUpdatedRequest();
+		req.setEmail("test@gmail.com");
+		req.setName("Sayali");
+		req.setUsername("testName");
+		req.setPassword("1234");
+		
+		DataUser dobj = new DataUser();
+		Mockito.when(userRepoObj.findByEmail("test@gmail.com")).thenReturn(dobj);
+		
+		ResponseEntity<InsertUpdateDeleteResponse> response = userDbSvcObj.updateUserDataS(req);
+		
+		Assertions.assertEquals("User Updated", response.getBody().getMsg());
+		
+		Mockito.verify(userRepoObj).save(Mockito.any(DataUser.class));
+		
+	}
+	
+	@Test
+	void UserNotFound() {
+		UserUpdatedRequest req = new UserUpdatedRequest();
+		req.setEmail("test@gmail.com");
+		req.setName("Sayali");
+		req.setUsername("testName");
+		req.setPassword("1234");
+		
+		DataUser dobj = new DataUser();
+		Mockito.when(userRepoObj.findByEmail("test@gmail.com")).thenReturn(null);
+		
+		ResponseEntity<InsertUpdateDeleteResponse> response = userDbSvcObj.updateUserDataS(req);
+		Assertions.assertEquals("User not found", response.getBody().getMsg());
+	}
+	
+	@Test
+	void UserDeleted() {
+		UserDeleteRequest req= new UserDeleteRequest();
+		req.setEmail("test@gmail.com");
+		
+		DataUser dobj = new DataUser();
+		Mockito.when(userRepoObj.findByEmail("test@gmail.com")).thenReturn(dobj);
+		
+		ResponseEntity<InsertUpdateDeleteResponse> res = userDbSvcObj.deleteUserDataS(req);
+		Assertions.assertEquals("User deleted", res.getBody().getMsg());
+		
+		Mockito.verify(userRepoObj).delete(dobj);
+	}
 
 }
