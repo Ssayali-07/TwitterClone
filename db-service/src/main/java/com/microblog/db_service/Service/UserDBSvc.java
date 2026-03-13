@@ -25,7 +25,7 @@ import com.microblog.db_service.Model.RequestEntity.UserPostRequest;
 import com.microblog.db_service.Model.RequestEntity.UserRequest;
 import com.microblog.db_service.Model.RequestEntity.UserUpdatedRequest;
 import com.microblog.db_service.Model.ResponseEntity.FetchFollowingPostResponse;
-import com.microblog.db_service.Model.ResponseEntity.InsertResponse;
+import com.microblog.db_service.Model.ResponseEntity.InsertUpdateDeleteResponse;
 import com.microblog.db_service.Model.ResponseEntity.UserFetchResponse;
 import com.microblog.db_service.Repository.IDataFollowersRepo;
 import com.microblog.db_service.Repository.IDataLikesRepo;
@@ -66,14 +66,14 @@ public class UserDBSvc {
 //
 //					return new ResponseEntity<>(responseMap, HttpStatus.OK);
 					
-					InsertResponse res = new InsertResponse("User Already Exist");
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("User Already Exist");
 					return new ResponseEntity(res, HttpStatus.OK);
 					
 //					return ResponseEntity.ok("User Already Exist");
 				} else if (dataUserObj2 != null) {
 					
 					
-					InsertResponse res = new InsertResponse("UserName Not Available");
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("UserName Not Available");
 					return new ResponseEntity(res, HttpStatus.OK);
 				}
 
@@ -87,7 +87,7 @@ public class UserDBSvc {
 
 					userRepoObj.save(dataUserObj);
 					
-					InsertResponse res = new InsertResponse("User Created");
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("User Created");
 					return new ResponseEntity(res, HttpStatus.OK);
 
 					
@@ -96,7 +96,7 @@ public class UserDBSvc {
 			} catch (Exception e) {
 				// TODO: handle exception
 				
-				InsertResponse res = new InsertResponse("Something went Wrong");
+				InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("Something went Wrong");
 				return new ResponseEntity(res, HttpStatus.OK);
 				
 
@@ -104,7 +104,7 @@ public class UserDBSvc {
 
 			}
 		} else {
-			InsertResponse res = new InsertResponse("Something went Wrong");
+			InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("Something went Wrong");
 			return new ResponseEntity(res, HttpStatus.OK);
 		}
 
@@ -123,36 +123,29 @@ public class UserDBSvc {
 					dataUserUpdateObj.setPassword(userUpdatedRequestObj.getPassword());
 
 					userRepoObj.save(dataUserUpdateObj);
+					
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("User Updated");
+					return new ResponseEntity(res, HttpStatus.OK);
 
-					Map<String, String> responseMap = new HashMap<>();
-
-					responseMap.put("msg", "User Updated");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					
 				} else {
-					Map<String, String> responseMap = new HashMap<>();
+					
 
-					responseMap.put("msg", "User not found");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("User not found");
+					return new ResponseEntity(res, HttpStatus.OK);
 
 				}
 
 			} catch (Exception e) {
 				// TODO: handle exception
 
-				Map<String, String> responseMap = new HashMap<>();
-
-				responseMap.put("msg", "Something went Wrong");
-
-				return new ResponseEntity<>(responseMap, HttpStatus.OK);
+				InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("Something went Wrong");
+				return new ResponseEntity(res, HttpStatus.OK);
 			}
 		} else {
-			Map<String, String> responseMap = new HashMap<>();
-
-			responseMap.put("msg", "Something went Wrong");
-
-			return new ResponseEntity<>(responseMap, HttpStatus.OK);
+			
+			InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("Something went Wrong");
+			return new ResponseEntity(res, HttpStatus.OK);
 		}
 
 	}
@@ -166,35 +159,25 @@ public class UserDBSvc {
 
 				if (dataUserDeleteObj != null) {
 					userRepoObj.delete(dataUserDeleteObj);
-					Map<String, String> responseMap = new HashMap<>();
-
-					responseMap.put("msg", "User deleted");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("User deleted");
+					return new ResponseEntity(res, HttpStatus.OK);
 
 				} else {
-					Map<String, String> responseMap = new HashMap<>();
 
-					responseMap.put("msg", "User not found");
-
-					return new ResponseEntity<>(responseMap, HttpStatus.OK);
+					InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("User not found");
+					return new ResponseEntity(res, HttpStatus.OK);
 
 				}
 
 			} catch (Exception e) {
 				// TODO: handle exception
-				Map<String, String> responseMap = new HashMap<>();
-
-				responseMap.put("msg", "Something went Wrong");
-
-				return new ResponseEntity<>(responseMap, HttpStatus.OK);
+				InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("Something went Wrong");
+				return new ResponseEntity(res, HttpStatus.OK);
 			}
 		} else {
-			Map<String, String> responseMap = new HashMap<>();
-
-			responseMap.put("msg", "Something went Wrong");
-
-			return new ResponseEntity<>(responseMap, HttpStatus.OK);
+			InsertUpdateDeleteResponse res = new InsertUpdateDeleteResponse("Something went Wrong");
+			return new ResponseEntity(res, HttpStatus.OK);
 		}
 
 	}
