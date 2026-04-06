@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import com.microblog.login_signup.Model.RequestEntity.LoginRequest;
 import com.microblog.login_signup.Model.ResponseEntity.LoginResponse;
 import com.microblog.login_signup.Model.ResponseEntity.SignUpResponse;
+import com.microblog.login_signup.SecurityUtil.JwtUtil;
 import com.microblog.login_signup.feign.UserDbClient;
 
 import lombok.Data;
@@ -19,6 +20,9 @@ public class LoginSvc {
 
 //	@Autowired
 //	RestTemplate rest;
+	
+	@Autowired
+	JwtUtil jwtUtilObj;
 	
 	@Autowired
 	UserDbClient userDbClientObj;
@@ -39,7 +43,9 @@ public class LoginSvc {
 				return new ResponseEntity(resObjSuccess, HttpStatus.OK);
 			}else {
 				if(commonUtilityObj.PasswordHashing(loginRequestObj.getPassword()).equals(loginResponseObj.getPassword())) {
-					LoginResponse resObjSuccess= new LoginResponse("Login Successfull");
+					
+					String jwt_token = jwtUtilObj.generateToken(loginRequestObj.getEmail());
+					LoginResponse resObjSuccess= new LoginResponse("Login Successfull", jwt_token);
 					return new ResponseEntity(resObjSuccess, HttpStatus.OK);
 				}else{
 					LoginResponse resObjSuccess= new LoginResponse("Invalid Password");
