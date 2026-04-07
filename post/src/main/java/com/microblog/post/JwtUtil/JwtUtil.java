@@ -1,4 +1,4 @@
-package com.microblog.login_signup.SecurityUtil;
+package com.microblog.post.JwtUtil;
 
 import java.util.Date;
 
@@ -8,10 +8,9 @@ import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-
 @Component
 public class JwtUtil {
-
+	
 	public String secret = "my-super-secret-key-that-is-long-enough-1234567890!@#"; // must be 256 bytes
 
 	private SecretKey key = Keys.hmacShaKeyFor(secret.getBytes());
@@ -37,4 +36,5 @@ public class JwtUtil {
 				.getSubject();
 
 	}
+
 }

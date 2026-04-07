@@ -1,4 +1,4 @@
-package com.microblog.login_signup.SecurityConfig;
+package com.microblog.post.SecurityConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.microblog.login_signup.Filter.JwtAuthFilter;
+import com.microblog.post.Filter.JwtAuthFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -17,14 +17,13 @@ public class SecurityConfig {
 	@Autowired
 	JwtAuthFilter jwtAuthFilterObj;
 	
+	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http){
 		http
 //		    .csrf(AbstractHttpConfigurer::disable)
 			.csrf(csrf -> csrf.disable())
-			.authorizeHttpRequests(auth->auth.requestMatchers("/login").permitAll()
-					.requestMatchers("/signUp").permitAll()
-			.anyRequest().authenticated());
+			.authorizeHttpRequests(auth->auth.anyRequest().authenticated());
 		http.addFilterBefore(jwtAuthFilterObj, UsernamePasswordAuthenticationFilter.class);
 		return http.build();
 	}
